@@ -1,0 +1,79 @@
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+}
+
+.h-custom{
+    height: 90vh;
+}
+
+.overlay{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-top: 70vh ;
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0.6;
+    transition: 0.3s;
+    color: transparent;
+}
+
+.overlay:hover{
+    background-color: rgba(255,255,255,0.7);
+    opacity: 1;
+    padding-top: 40vh ;
+    color: #000;
+}
+.mobile-navbar-items{
+    display: none;
+}
+.show{
+    opacity: 1;
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+.hide{
+    opacity: 0;
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+@media screen  and (max-width: 600px) {
+    .h-custom{
+        height: 100vh;
+    }
+    .navbar-items{
+        display: none !important;
+    }
+    .mobile-navbar-items{
+        display: block !important;
+    }
+}
+
+@media screen  and (max-width: 879px) {
+    .h-custom{
+        height: 100vh;
+    }
+    .navbar-items{
+        display: none !important;
+    }
+    .mobile-navbar-items{
+        display: block !important;
+    }
+}
+
+
+
+@keyframes slide-in {
+    0% { opacity: 0; display: none; }
+    100% { opacity: 1; display: block;}    
+}
+
+    
+@keyframes slide-out {
+    100% { opacity: 0; display: none;}
+
+}
+
